@@ -5,15 +5,21 @@
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
       <h1><?php the_title(); ?></h1>
-      <div class="post-meta">
-        <time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php the_date(); ?></time>
-        <span><?php the_author(); ?></span>
+      <div class="entry-meta">
+        <time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php the_time( 'F j, Y' ); ?></time>
+        <span class="byline"><?php the_author_posts_link(); ?></span>
       </div>
-      <div><?php the_content(); ?></div>
+      <div class="entry-content">
+        <?php the_content(); ?>
+      </div>
     </article>
+
+    <nav class="post-navigation">
+      <?php previous_post_link( '%link', '&larr; %title' ); ?>
+      <?php next_post_link( '%link', '%title &rarr;' ); ?>
+    </nav>
 
   <?php endwhile; endif; ?>
 </main>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

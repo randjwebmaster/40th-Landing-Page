@@ -5,11 +5,12 @@
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
       <h1><?php the_title(); ?></h1>
-      <div><?php the_content(); ?></div>
+      <div class="entry-content">
+        <?php the_content(); ?>
+      </div>
     </article>
 
   <?php endwhile; endif; ?>
 </main>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
