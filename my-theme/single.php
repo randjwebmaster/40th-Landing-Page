@@ -4,9 +4,9 @@
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-      <h1><?php the_title(); ?></h1>
+      <h1><?php echo esc_html( get_the_title() ); ?></h1>
       <div class="entry-meta">
-        <time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php the_time( 'F j, Y' ); ?></time>
+        <time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php echo esc_html( get_the_time( 'F j, Y' ) ); ?></time>
         <span class="byline"><?php the_author_posts_link(); ?></span>
       </div>
       <div class="entry-content">

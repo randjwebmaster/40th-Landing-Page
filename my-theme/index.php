@@ -6,13 +6,13 @@
   <section class="page-hero">
     <div>
       <div class="eyebrow"><span class="dot">●</span> 1986 &mdash; 2026</div>
-      <h1><?php the_title(); ?></h1>
+      <h1><?php echo esc_html( get_the_title() ); ?></h1>
       <div class="lede"><?php the_content(); ?></div>
     </div>
     <div class="logo-card">
       <div class="logo-stack">
-        <img class="logo-mark" src="<?php echo get_template_directory_uri(); ?>/assets/rj-mark.png" alt="<?php bloginfo( 'name' ); ?> 40th Anniversary — 1986–2026" />
-        <img class="logo-tagline" src="<?php echo get_template_directory_uri(); ?>/assets/rj-tagline.png" alt="years of making a difference" aria-hidden="true" />
+        <img class="logo-mark" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/rj-mark.png" alt="<?php bloginfo( 'name' ); ?> 40th Anniversary — 1986–2026" />
+        <img class="logo-tagline" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/rj-tagline.png" alt="years of making a difference" aria-hidden="true" />
       </div>
     </div>
   </section>

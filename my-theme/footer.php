@@ -2,7 +2,7 @@
   <div class="inner">
     <div>
       <a class="brand-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php bloginfo( 'name' ); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/rj-lockup.png" alt="<?php bloginfo( 'name' ); ?>" />
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/rj-lockup.png" alt="<?php bloginfo( 'name' ); ?>" />
       </a>
       <div class="tag">Est. 1986 &middot; Somerville, NJ</div>
     </div>
