@@ -1,5 +1,10 @@
 <?php
 
+require_once get_template_directory() . '/inc/cpt.php';
+require_once get_template_directory() . '/inc/meta-boxes.php';
+require_once get_template_directory() . '/inc/customizer.php';
+require_once get_template_directory() . '/inc/seed-data.php';
+
 function my_theme_setup() {
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
